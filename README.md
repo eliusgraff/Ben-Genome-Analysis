@@ -4,6 +4,7 @@
  Both python file and jupyter notebook included
  
 Program will take all .fna files from GenomeFiles folder and count the number of genes in them.
-Script will assume that all organism names are consistent between their .fna file names as well as
-the OrgSizes.csv file which associates a length and width to the various organisms so that the user
-does not need to enter them manually. Example values and files are included for ease of use
+Script will assume that all organism names are consistent with their .fna file names. Script will
+compile all names and number of genes into one csv file. Length and Width can be added to the AllData.csv
+file without script overwriting those cells if its run again. Program just keeps adding new organisms as
+their .fna files are added to the GenomeFiles folder, always manintaing old data.

@@ -31,14 +31,7 @@ for genomeFile in arr:
 
     myOrganisms[genomeFile] = organism(totletter, length, width) #add the organism to the dict
 
-#display all data
-for organism in myOrganisms:
-    print()
-    print()
-    print("For organism in :" + organism[:-4] + " file") #printing out all but last 4 charaters of filename
-    print("Length: " + str(myOrganisms[organism].length) + "\tWidth: " + str(myOrganisms[organism].width))
-    print("Number of Genes: " + str(myOrganisms[organism].numGenes))
-
+#Sends data to CSV file
 with open('OrganismData.csv', 'w') as myFile:
     myFile.write("Organism Name,Number Of Genes,Length,Width\n")
     for organism in myOrganisms:
@@ -46,3 +39,11 @@ with open('OrganismData.csv', 'w') as myFile:
         myFile.write(str(myOrganisms[organism].numGenes) + ',')
         myFile.write(str(myOrganisms[organism].length) + ',')
         myFile.write(str(myOrganisms[organism].width) + '\n')
+
+#display all data
+for organism in myOrganisms:
+    print()
+    print()
+    print("For organism in :" + organism[:-4] + " file") #printing out all but last 4 charaters of filename
+    print("Length: " + str(myOrganisms[organism].length) + "\tWidth: " + str(myOrganisms[organism].width))
+    print("Number of Genes: " + str(myOrganisms[organism].numGenes))
